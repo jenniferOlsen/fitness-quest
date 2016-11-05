@@ -54,12 +54,13 @@ class ActivityLog extends Component{
                     point: 10,
                     skill: "dexterity"
                 },
-                units: 3.5,
+                units: 45,
                 date: new Date(new Date() - 24*60*60*1000)
             }]
         };
         this.onSelectHandler = this.onSelectHandler.bind(this);
         this.clearActivity = this.clearActivity.bind(this);
+        this.logActivity = this.logActivity.bind(this);
     }
 
     onSelectHandler(eventKey) {
@@ -68,6 +69,16 @@ class ActivityLog extends Component{
 
     clearActivity() {
         this.setState({ selectedActivity: null });
+    }
+
+    logActivity(duration) {
+        const activities = this.state.loggedActivities;
+        activities.unshift({
+            activity: this.state.selectedActivity,
+            units: duration,
+            date: new Date()
+        });
+        this.setState({ loggedActivities: activities })
     }
 
     render() {

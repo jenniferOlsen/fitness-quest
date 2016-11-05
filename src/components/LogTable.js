@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 
 class LogTableRow extends Component {
-
     render() {
         const points = `+${this.props.activity.units/this.props.activity.activity.point} ${this.props.activity.activity.skill}`;
         const d = this.props.activity.date;

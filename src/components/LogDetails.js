@@ -14,8 +14,8 @@ class LogDetailForm extends Component {
     }
 
     handleSubmit(e) {
-        // "Save" the data here
         e.preventDefault();
+        this.props.logActivity(parseFloat(this.state.value));
         this.props.dismiss();
     }
 
@@ -66,7 +66,7 @@ class LogDetails extends Component{
                         <Modal.Title>Activity Entry</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <LogDetailForm activity={this.props.activity} dismiss={this.dismiss}/>
+                        <LogDetailForm activity={this.props.activity} dismiss={this.dismiss} logActivity={this.props.logActivity} />
                     </Modal.Body>
                 </Modal.Dialog>
             )
@@ -77,7 +77,8 @@ class LogDetails extends Component{
 
 LogDetails.PropTypes = {
     activity: React.PropTypes.object,
-    clearActivity: React.PropTypes.func
+    clearActivity: React.PropTypes.func,
+    logActivity: React.PropTypes.func
 };
 
 export default LogDetails;
