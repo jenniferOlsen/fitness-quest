@@ -29,7 +29,7 @@ class MessageLog extends Component{
   render() {
     return (
       <div id="messageBoard">
-        <form >
+        <form className="message-form">
             <FormGroup controlId="formControlsTextarea">
               <ControlLabel>Message Board</ControlLabel>
               <FormControl componentClass="textarea" value={this.state.value} onChange={this.handleChange} placeholder="Chat to the group here..." />

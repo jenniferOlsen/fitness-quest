@@ -75,6 +75,20 @@ img {
     list-style-type: none;
     text-align: left;
     -webkit-padding-start: 1em;
+    display: inline-block;
+    width: 50%;
+    float: right;
+    margin-top: 25px;
+}
+
+.message-form {
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+#messageBoard {
+    margin-top: 20px;
 }
 
 .dropdown-menu-cust {
