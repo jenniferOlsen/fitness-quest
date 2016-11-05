@@ -38,6 +38,7 @@
 .profile {
     float: left;
     max-width: 50%;
+    min-width: 40%;
 }
 .user-welcome {
     text-align: left;
@@ -93,4 +94,10 @@ img {
 
 .dropdown-menu-cust {
     background-color: #F0FFFF;
+}
+
+.log-table {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 50% !important;
 }

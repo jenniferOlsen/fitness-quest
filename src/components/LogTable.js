@@ -20,7 +20,7 @@ class LogTableRow extends Component {
 
 class LogTable extends Component {
     render() {
-        return <Table bordered condensed responsive>
+        return <Table bordered condensed className="log-table">
             <thead>
             <tr>
                 <th>Date</th>
