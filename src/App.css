@@ -71,8 +71,10 @@ img {
     max-height: 280px;
 }
 
-.dropdown-menu-cust {
-    background-color: #F0FFFF;
+.message-box {
+    list-style-type: none;
+    text-align: left;
+    -webkit-padding-start: 1em;
 }
 
 .dropdown-menu-cust {
