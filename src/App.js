@@ -15,15 +15,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Fitness Quest</h2>
         </div>
-<<<<<<< HEAD
-        <TabsLayout />
-        
-
-      
-      
-      
-        <div>Message board component here</div>
-=======
         <Grid>
           <Row>
             <TabsLayout />
@@ -32,7 +23,6 @@ class App extends Component {
             <MessageLog />
           </Row>
         </Grid>
->>>>>>> 113c70714c5e57ebc9c291017178b39693308726
       </div>
     );
   }
