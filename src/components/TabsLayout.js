@@ -6,7 +6,6 @@ import CurrentQuest from './CurrentQuest';
 import TableComponent from './TableComponent';
 
 class TabsLayout extends Component{
-
   render() {
     return (
       <Tabs defaultactiveKey={1} id="controlled-tab-example">

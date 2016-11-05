@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { DropdownButton, MenuItem } from 'react-bootstrap';
 import LogDetails from './LogDetails';
+import LogTable from './LogTable';
 
 class ActivityLog extends Component{
 
@@ -12,34 +13,50 @@ class ActivityLog extends Component{
                 "lift": {
                     name: "lifting",
                     units: "reps",
-                    point: 8
+                    point: 8,
+                    skill: "strength"
                 },
                 "yoga": {
                     name: "yoga",
                     units: "minutes",
-                    point: 30
+                    point: 10,
+                    skill: "dexterity"
                 },
                 "walk": {
                     name: "walking",
                     units: "minutes",
-                    point: 30
+                    point: 30,
+                    skill: "constitution"
                 },
                 "run": {
                     name: "running",
                     units: "miles",
-                    point: 0.5
+                    point: 0.5,
+                    skill: "wisdom"
                 },
                 "brain": {
                     name: "brain training",
                     units: "minutes",
-                    point: 10
+                    point: 10,
+                    skill: "intelligence"
                 },
                 "meditate": {
                     name: "meditation",
                     units: "minutes",
-                    point: 10
+                    point: 10,
+                    skill: "charisma"
                 }
-            }
+            },
+            loggedActivities: [{
+                activity: {
+                    name: "yoga",
+                    units: "minutes",
+                    point: 10,
+                    skill: "dexterity"
+                },
+                units: 3.5,
+                date: new Date(new Date() - 24*60*60*1000)
+            }]
         };
         this.onSelectHandler = this.onSelectHandler.bind(this);
         this.clearActivity = this.clearActivity.bind(this);
@@ -64,7 +81,8 @@ class ActivityLog extends Component{
                     <MenuItem onSelect={this.onSelectHandler} eventKey="brain">Brain (intelligence)</MenuItem>
                     <MenuItem onSelect={this.onSelectHandler} eventKey="meditate">Meditate (charisma)</MenuItem>
                 </DropdownButton>
-                <LogDetails clearActivity={this.clearActivity} activity={this.state.selectedActivity} />
+                <LogDetails clearActivity={this.clearActivity} activity={this.state.selectedActivity} logActivity={this.logActivity} />
+                <LogTable activities={this.state.loggedActivities} />
             </div>
         );
     }

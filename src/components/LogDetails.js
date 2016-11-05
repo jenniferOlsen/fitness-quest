@@ -43,11 +43,9 @@ class LogDetailForm extends Component {
 
 LogDetailForm.propTypes = {
     dismiss: React.PropTypes.func,
-};
-
-LogDetailForm.propTypes = {
     activity: React.PropTypes.object
 };
+
 
 class LogDetails extends Component{
 
