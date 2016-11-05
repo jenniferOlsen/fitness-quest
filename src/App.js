@@ -13,6 +13,11 @@ class App extends Component {
           <h2>Fitness Quest</h2>
         </div>
         <TabsLayout />
+        <h1>monster photo goes here</h1>
+  
+      
+      
+        <h1>table with quest stats goes here</h1>
         <div>Message board component here</div>
       </div>
     );

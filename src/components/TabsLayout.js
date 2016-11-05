@@ -8,10 +8,14 @@ class TabsLayout extends Component{
   render() {
     return (
       <Tabs defaultactiveKey={1} id="controlled-tab-example">
+<<<<<<< Updated upstream
         <Tab eventKey={1} title="Your Stats">
             <UserProfile />
             <ActivityLog />
         </Tab>
+=======
+        <Tab eventKey={1} title="Your Stats"></Tab>
+>>>>>>> Stashed changes
         <Tab eventKey={2} title="Team Stats"></Tab>
       </Tabs>
     );
