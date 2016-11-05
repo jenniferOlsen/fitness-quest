@@ -22,3 +22,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.profile {
+    float: left;
+    max-width: 50%;
+    padding: 1em;
+}
+.stats-list {
+    list-style: none;
+    margin-top: 5px;
+    text-align: left;
+    -webkit-padding-start: 1em;
+}
