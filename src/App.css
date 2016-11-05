@@ -70,3 +70,9 @@
 img {
     max-height: 280px;
 }
+
+.message-box {
+    list-style-type: none;
+    text-align: left;
+    -webkit-padding-start: 1em;
+}

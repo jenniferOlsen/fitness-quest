@@ -6,7 +6,7 @@ class MessageLog extends Component{
   constructor(props) {
       super(props);
       this.state = { value: '', messages: [] };
-      this.printMessages = this.printMessages.bind(this);
+      this.printMessages = this.printMessages;
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -26,16 +26,6 @@ class MessageLog extends Component{
     console.log(`chose menu item ${eventKey}`);
   }
 
-  printMessages() {
-    var output = "";
-    for (var i = this.state.messages.length; i > -1; i--) {
-        output += this.state.messages[i];
-    };
-    console.log(output);
-
-    return output;
-  };
-
   render() {
     return (
       <div id="messageBoard">
@@ -47,8 +37,10 @@ class MessageLog extends Component{
             <Button onClick={this.handleSubmit} type="submit" >Post Message</Button>
         </form>
         <div id="currentMessages">
-          <ul>
-            <li>{this.printMessages()}</li>
+          <ul className="message-box">
+              {this.state.messages.map(function(messages) {
+              return <li key={messages}>{messages}</li>;
+            })}
           </ul>
         </div>
       </div>

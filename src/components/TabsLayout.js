@@ -8,7 +8,7 @@ import TableComponent from './TableComponent';
 class TabsLayout extends Component{
   render() {
     return (
-      <Tabs defaultactiveKey={1} id="controlled-tab-example">
+      <Tabs defaultActiveKey={1} id="tab-example">
         <Tab eventKey={1} title="Your Stats" className="tabcontent">
             <UserProfile />
             <ActivityLog />
