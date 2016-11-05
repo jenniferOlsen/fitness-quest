@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
 import UserProfile from './UserProfile';
 import ActivityLog from './ActivityLog';
+import TableComponent from './TableComponent';
 
 class TabsLayout extends Component{
 
@@ -12,7 +13,9 @@ class TabsLayout extends Component{
             <UserProfile />
             <ActivityLog />
         </Tab>
-        <Tab eventKey={2} title="Team Stats"></Tab>
+        <Tab eventKey={2} title="Team Stats">
+            <TableComponent />
+        </Tab>
       </Tabs>
     );
   }
