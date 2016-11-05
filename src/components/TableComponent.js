@@ -5,7 +5,7 @@ class TableComponent extends Component{
 
 render() {
     return (
-  <Table striped bordered condensed hover>
+  <Table striped bordered condensed hover className="team-stats">
     <thead>
       <tr>
         <th>#</th>

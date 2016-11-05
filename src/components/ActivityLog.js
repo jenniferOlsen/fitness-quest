@@ -51,7 +51,7 @@ class ActivityLog extends Component{
     render() {
         return (
             <div>
-                <DropdownButton bsStyle="primary" title="Log New Activity" id="Log new activity">
+                <DropdownButton bsStyle="default" className="activities-dropdown" title="Log New Activity" id="activities-dropdown">
                     <MenuItem onSelect={this.onSelectHandler} eventKey="lift">Lift (strength)</MenuItem>
                     <MenuItem onSelect={this.onSelectHandler} eventKey="yoga">Yoga (dexterity)</MenuItem>
                     <MenuItem onSelect={this.onSelectHandler} eventKey="walk">Walk (constitution)</MenuItem>
