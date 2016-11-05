@@ -70,3 +70,7 @@
 img {
     max-height: 280px;
 }
+
+.dropdown-menu-cust {
+    background-color: #F0FFFF;
+}

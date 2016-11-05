@@ -85,12 +85,12 @@ class ActivityLog extends Component{
         return (
             <div>
                 <DropdownButton bsStyle="default" className="activities-dropdown" title="Log New Activity" id="activities-dropdown">
-                    <MenuItem onSelect={this.onSelectHandler} eventKey="lift">Lift (strength)</MenuItem>
-                    <MenuItem onSelect={this.onSelectHandler} eventKey="yoga">Yoga (dexterity)</MenuItem>
-                    <MenuItem onSelect={this.onSelectHandler} eventKey="walk">Walk (constitution)</MenuItem>
-                    <MenuItem onSelect={this.onSelectHandler} eventKey="run">Run (wisdom)</MenuItem>
-                    <MenuItem onSelect={this.onSelectHandler} eventKey="brain">Brain (intelligence)</MenuItem>
-                    <MenuItem onSelect={this.onSelectHandler} eventKey="meditate">Meditate (charisma)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="lift" className="dropdown-menu-cust">Lift (strength)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="yoga" className="dropdown-menu-cust">Yoga (dexterity)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="walk" className="dropdown-menu-cust">Walk (constitution)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="run" className="dropdown-menu-cust">Run (wisdom)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="brain" className="dropdown-menu-cust">Brain (intelligence)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="meditate" className="dropdown-menu-cust">Meditate (charisma)</MenuItem>
                 </DropdownButton>
                 <LogDetails clearActivity={this.clearActivity} activity={this.state.selectedActivity} logActivity={this.logActivity} />
                 <LogTable activities={this.state.loggedActivities} />
