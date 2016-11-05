@@ -13,7 +13,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Fitness Quest</h2>
+          <h2 className="App-name">Fitness Quest</h2>
         </div>
         <Grid>
           <Row>

@@ -8,9 +8,9 @@ constructor(props) {
         super(props);
         this.state = {
             sphinxStats: {
-                intelligence: 38,
-                wisdom: 23,
-                charisma: 12
+                intelligence: 108,
+                wisdom: 123,
+                charisma: 97
             },
             currentQuest: 'Sphinx'
         };

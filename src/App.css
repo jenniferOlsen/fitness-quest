@@ -4,12 +4,20 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 74px;
+  float: left;
+  margin: 15px;
+}
+
+.App-name {
+    display: inline-block;
+    margin-top: 38px;
+    margin-left: -82px;
 }
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 131px;
   padding: 20px;
   color: white;
 }
@@ -31,12 +39,16 @@
     float: left;
     max-width: 50%;
 }
-
+.user-welcome {
+    text-align: left;
+    margin-left: 2em;
+}
 .stats-list {
     list-style: none;
     margin-top: 5px;
     text-align: left;
     -webkit-padding-start: 1em;
+    display: inline-block;
 }
 
 .activities-dropdown {
@@ -49,4 +61,12 @@
     text-align: left;
     max-width: 50% !important;
     float: right;
+}
+
+.table-totals {
+    font-weight: bold;
+}
+
+img {
+    max-height: 300px;
 }
