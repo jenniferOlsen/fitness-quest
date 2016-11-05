@@ -31,21 +31,26 @@ class ActivityLog extends Component{
                 },
                 "brain": {
                     name: "brain training",
-                    units: "mintues",
+                    units: "minutes",
                     point: 10
                 },
                 "meditate": {
                     name: "meditation",
-                    units: "mintues",
+                    units: "minutes",
                     point: 10
                 }
             }
         };
         this.onSelectHandler = this.onSelectHandler.bind(this);
+        this.clearActivity = this.clearActivity.bind(this);
     }
 
     onSelectHandler(eventKey) {
         this.setState({ selectedActivity: this.state.activities[eventKey]});
+    }
+
+    clearActivity() {
+        this.setState({ selectedActivity: null });
     }
 
     render() {
@@ -59,7 +64,7 @@ class ActivityLog extends Component{
                     <MenuItem onSelect={this.onSelectHandler} eventKey="brain">Brain (intelligence)</MenuItem>
                     <MenuItem onSelect={this.onSelectHandler} eventKey="meditate">Meditate (charisma)</MenuItem>
                 </DropdownButton>
-                <LogDetails activity={this.state.selectedActivity} />
+                <LogDetails clearActivity={this.clearActivity} activity={this.state.selectedActivity} />
             </div>
         );
     }

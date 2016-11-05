@@ -53,37 +53,33 @@ class LogDetails extends Component{
 
     constructor(props) {
         super(props);
-        this.state = { visible: false };
         this.dismiss = this.dismiss.bind(this);
     }
 
-    componentWillReceiveProps(nextProps) {
-        this.setState({ visible: !!nextProps.activity});
-    }
-
     dismiss() {
-        this.setState({ visible: false })
+        this.props.clearActivity();
     }
 
     render() {
-        if (!this.state.visible) {
-            return <span />
+        if (!!this.props.activity) {
+            return (
+                <Modal.Dialog>
+                    <Modal.Header>
+                        <Modal.Title>Activity Entry</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <LogDetailForm activity={this.props.activity} dismiss={this.dismiss}/>
+                    </Modal.Body>
+                </Modal.Dialog>
+            )
         }
-        return (
-            <Modal.Dialog>
-                <Modal.Header>
-                    <Modal.Title>Activity Entry</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <LogDetailForm activity={this.props.activity} dismiss={this.dismiss} />
-                </Modal.Body>
-            </Modal.Dialog>
-        )
+        return <span />
     }
 }
 
 LogDetails.PropTypes = {
-    activity: React.PropTypes.object
+    activity: React.PropTypes.object,
+    clearActivity: React.PropTypes.func
 };
 
 export default LogDetails;
