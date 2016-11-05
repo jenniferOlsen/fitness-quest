@@ -3,6 +3,12 @@
 ## Description
 Fitness Quest is a game where you can compete as part of a team to complete quests such as defeating monsters, navigating terrain, and finding treasures by logging progress toward your fitness and health goals.
 
+### Installation Instructions
+* Clone repository
+* Run 'npm install' from within the project directory
+* Run 'npm start'
+* View site at http://localhost:3000
+
 ### Game Play
 * Setup user profile
 * View your stats
