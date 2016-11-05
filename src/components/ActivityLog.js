@@ -1,25 +1,68 @@
 import React, { Component } from 'react';
 import { DropdownButton, MenuItem } from 'react-bootstrap';
+import LogDetails from './LogDetails';
 
 class ActivityLog extends Component{
-// add function that will trigger modal with the onSelect
 
-  onSelectAlert(eventKey) {
-    console.log(`chose menu item ${eventKey}`);
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedActivity: null,
+            activities: {
+                "lift": {
+                    name: "lifting",
+                    units: "reps",
+                    point: 8
+                },
+                "yoga": {
+                    name: "yoga",
+                    units: "minutes",
+                    point: 30
+                },
+                "walk": {
+                    name: "walking",
+                    units: "minutes",
+                    point: 30
+                },
+                "run": {
+                    name: "running",
+                    units: "miles",
+                    point: 0.5
+                },
+                "brain": {
+                    name: "brain training",
+                    units: "mintues",
+                    point: 10
+                },
+                "meditate": {
+                    name: "meditation",
+                    units: "mintues",
+                    point: 10
+                }
+            }
+        };
+        this.onSelectHandler = this.onSelectHandler.bind(this);
+    }
 
-  render() {
-    return (
-      <DropdownButton bsStyle="title.toLowerCase()"  title="Log New Activity" id="dropdown-basic-${i}" >
-        <MenuItem onSelect={this.onSelectAlert} eventKey="Lift">Lift (strength)</MenuItem>
-        <MenuItem onSelect={this.onSelectAlert} eventKey="Yoga">Yoga (dexterity)</MenuItem>
-        <MenuItem onSelect={this.onSelectAlert} eventKey="Walk">Walk (constitution)</MenuItem>
-        <MenuItem onSelect={this.onSelectAlert} eventKey="Run">Run (wisdom)</MenuItem>
-        <MenuItem onSelect={this.onSelectAlert} eventKey="Brain">Brain (intelligence)</MenuItem>
-        <MenuItem onSelect={this.onSelectAlert} eventKey="Meditate">Meditate (charisma)</MenuItem>
-      </DropdownButton>
-    );
-  }
+    onSelectHandler(eventKey) {
+        this.setState({ selectedActivity: this.state.activities[eventKey]});
+    }
+
+    render() {
+        return (
+            <div>
+                <DropdownButton bsStyle="default" className="activities-dropdown" title="Log New Activity" id="activities-dropdown">
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="lift">Lift (strength)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="yoga">Yoga (dexterity)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="walk">Walk (constitution)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="run">Run (wisdom)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="brain">Brain (intelligence)</MenuItem>
+                    <MenuItem onSelect={this.onSelectHandler} eventKey="meditate">Meditate (charisma)</MenuItem>
+                </DropdownButton>
+                <LogDetails activity={this.state.selectedActivity} />
+            </div>
+        );
+    }
 };
 
 export default ActivityLog;

@@ -23,14 +23,27 @@
   to { transform: rotate(360deg); }
 }
 
+.tabcontent {
+    padding: 1em;
+}
+
 .profile {
     float: left;
     max-width: 50%;
-    padding: 1em;
 }
+
 .stats-list {
     list-style: none;
     margin-top: 5px;
     text-align: left;
     -webkit-padding-start: 1em;
+}
+
+.activities-dropdown {
+    background: none !important;
+    margin-top: 20px;
+}
+
+.team-stats {
+    margin-top: 20px;
 }

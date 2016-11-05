@@ -1,3 +1,18 @@
+# Fitness Quest
+prototype: November 5, 2016
+
+## Description
+Fitness Quest is a game where you can compete as part of a team to complete quests such as defeating monsters, navigating terrain, and finding treasures by logging progress toward your fitness and health goals.
+
+### Team: D6
+* [Auora Anderson](https://github.com/auroralemieux)
+* [Barbara Hazlett](https://github.com/hazlettb)
+* [Casey Williams](https://github.com/caseywilliams)
+* [Jenny Olsen](http://www.jennyo.info/)
+* [Karen Freeman-Smith](https://karenfreemansmith.github.io)
+* [Raksha Shetty](https://github.com/rakshashetty)
+
+### Technical Notes
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
