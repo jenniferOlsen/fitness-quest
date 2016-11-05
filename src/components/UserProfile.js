@@ -22,7 +22,7 @@ class UserProfile extends Component{
   render() {
     return (
      <div className="profile">
-        <h2>Welcome {this.state.user.name} </h2>
+        <h2 className="user-welcome">Welcome {this.state.user.name} </h2>
          <Image alt="avatar" src="http://lorempixel.com/350/350/cats/" rounded />
          <ul className="stats-list">
              <li>Strength: {this.state.user.strength}</li>

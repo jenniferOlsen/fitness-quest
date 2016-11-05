@@ -2,21 +2,56 @@ import React, { Component } from 'react';
 import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 class MessageLog extends Component{
-// add function that will trigger modal with the onSelect
+
+  constructor(props) {
+      super(props);
+      this.state = { value: '', messages: [] };
+      this.printMessages = this.printMessages.bind(this);
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(e) {
+      this.setState({ value: e.target.value });
+  }
+
+  handleSubmit(e) {
+      // "Save" the data here
+      e.preventDefault();
+      this.setState({ messages: [this.state.value].concat(this.state.messages)});
+      this.setState({value: ''})
+  }
 
   onSelectAlert(eventKey) {
     console.log(`chose menu item ${eventKey}`);
   }
 
+  printMessages() {
+    var output = "";
+    for (var i = this.state.messages.length; i > -1; i--) {
+        output += this.state.messages[i];
+    };
+    console.log(output);
+
+    return output;
+  };
+
   render() {
     return (
-      <form>
-        <FormGroup controlId="formControlsTextarea">
-          <ControlLabel>Message Board</ControlLabel>
-          <FormControl componentClass="textarea" placeholder="Chat to the group here..." />
-        </FormGroup>
-        <Button type="submit">Submit</Button>
-      </form>
+      <div id="messageBoard">
+        <form >
+            <FormGroup controlId="formControlsTextarea">
+              <ControlLabel>Message Board</ControlLabel>
+              <FormControl componentClass="textarea" value={this.state.value} onChange={this.handleChange} placeholder="Chat to the group here..." />
+            </FormGroup>
+            <Button onClick={this.handleSubmit} type="submit" >Post Message</Button>
+        </form>
+        <div id="currentMessages">
+          <ul>
+            <li>{this.printMessages()}</li>
+          </ul>
+        </div>
+      </div>
     );
   }
 };
