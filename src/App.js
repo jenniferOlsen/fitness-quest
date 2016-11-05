@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Grid, Row } from 'react-bootstrap';
 import TabsLayout from './components/TabsLayout';
-import logo from './logo.svg';
+import logo from '../assets/logo.png';
 import './App.css';
 import MessageLog from './components/MessageLog';
 
