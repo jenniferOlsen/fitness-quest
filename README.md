@@ -13,7 +13,7 @@ Fitness Quest is a game where you can compete as part of a team to complete ques
 * Setup user profile
 * View your stats
 * Log activities to increase your stats (different activities increase different stats, encouraging diverse teams)
-* Complete quests when your stats are higher the quest requirements
+* Complete quests when your team stats meet or exceet the quest requirements.
 * Future version will include rewards like badges or increased points for activities when you complete quests.
 * You can start or join a team to combine stats and beat more challenges.
 * Future version will include team messages to encourage each other to log more activities.
