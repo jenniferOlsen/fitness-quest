@@ -23,7 +23,7 @@ class UserProfile extends Component{
     return (
      <div className="profile">
         <h2>Welcome {this.state.user.name} </h2>
-         <Image alt="avatar" src="http://lorempixel.com/180/180/cats/" />
+         <Image alt="avatar" src="http://lorempixel.com/350/350/cats/" rounded />
          <ul className="stats-list">
              <li>Strength: {this.state.user.strength}</li>
              <li>Consitution: {this.state.user.constitution}</li>

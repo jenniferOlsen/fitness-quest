@@ -46,4 +46,7 @@
 
 .team-stats {
     margin-top: 20px;
+    text-align: left;
+    max-width: 50% !important;
+    float: right;
 }
